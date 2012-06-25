@@ -304,7 +304,7 @@ bool ImpactZoneSolver::inelastic_projection( const ImpactZone& iz )
             
             assert( zone_vertex_iter != zone_vertices.end() );
             
-            int mat_j = to_int( zone_vertex_iter - zone_vertices.begin() );
+            int mat_j = to_int((size_t)(zone_vertex_iter - zone_vertices.begin()));
             
             GCT(mat_j*3, i) = coll.m_alphas[v] * coll.m_normal[0];
             GCT(mat_j*3+1, i) = coll.m_alphas[v] * coll.m_normal[1];
